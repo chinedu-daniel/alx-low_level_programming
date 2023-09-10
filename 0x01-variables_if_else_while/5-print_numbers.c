@@ -13,8 +13,6 @@ int main(void)
 	for (a = 0; a <= 9; a++)
 	{
 	printf("%d\n", a);
-
-	a = a + 1;
 	}
 
 	return (0);
