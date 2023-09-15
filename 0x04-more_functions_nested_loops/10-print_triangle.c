@@ -13,7 +13,8 @@ void print_triangle(int size)
 	}
 	else
 	{
-		int i, j;
+		int i;
+		int j;
 
 		for (i = 1; i <= size; i++)
 		{
@@ -25,7 +26,7 @@ void print_triangle(int size)
 			{
 				_putchar('#');
 			}
-			_putchar('\n');
 		}
+		_putchar('\n');
 	}
 }
