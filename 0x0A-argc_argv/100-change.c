@@ -5,6 +5,7 @@
  * main - function that prints minimum nuber of coins
  * @argc: argument count
  * @argv: argument value
+ * @calculate_change: variable description
  *
  * Return: 0
  */
@@ -26,7 +27,12 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
+	printf("%d\n", num_coins);
+	return (0);
+}
 
+void calculate_change(int cents)
+{
 	num_coins = 0;
 
 	while (cents > 0)
@@ -35,24 +41,30 @@ int main(int argc, char *argv[])
 		{
 			cents -= 25;
 			num_coins++;
-		} else if (cents >= 10)
+		}
+		else if (cents >= 10)
+
 		{
 			cents -= 10;
 			num_coins++;
-		} else if (cents >= 5)
+		}
+		else if (cents >= 5)
+
 		{
 			cents -= 5;
 			num_coins++;
-		} else if (cents >= 2)
+		}
+		else if (cents >= 2)
+
 		{
 			cents -= 2;
 			num_coins++;
-		} else
+		}
+		else
 		{
 			cents -= 1;
 			num_coins++;
 		}
 	}
-	printf("%d\n", num_coins);
-	return (0);
+	return (num_coins);
 }
