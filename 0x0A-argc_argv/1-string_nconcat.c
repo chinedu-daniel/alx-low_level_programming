@@ -10,22 +10,20 @@
  * Return: pointer to a character
  */
 
-unsigned int s1_len, s2_len;
-char *concat_str;
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
+	unsigned int s1_len = 0, s2_len = 0;
 	unsigned int i;
+	char *concat_str;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	
-	s1_len = 0, s2_len = 0;
 
 	while (s1[s1_len] != '\0')
 		s1_len++;
+
 	while (s2[s2_len] != '\0')
 		s2_len++;
 
