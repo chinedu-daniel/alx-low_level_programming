@@ -8,8 +8,8 @@
 
 char *_strdup(char *str)
 {
-	char *aaa;
-	size_t i, r;
+	char *strdout;
+	size_t i, j;
 
 	if (str == NULL)
 		return (NULL);
@@ -18,12 +18,12 @@ char *_strdup(char *str)
 	while (str[i] != '\0')
 		i++;
 
-	aaa = (char *)malloc(sizeof(char) * (i + 1));
+	strdout = (char *)malloc(sizeof(char) * (i + 1));
 
-	if (aaa == NULL)
+	if (strdout == NULL)
 		return (NULL);
 
-	for (r = 0; str[i]; r++)
-		aaa[r] = str[r];
-	return (aaa);
+	for (j = 0; j < i; i++)
+		strdout[i] = str[i];
+	return (strdout);
 }
