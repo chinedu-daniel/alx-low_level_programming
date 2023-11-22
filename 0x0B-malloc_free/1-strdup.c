@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
 /**
@@ -10,7 +9,7 @@
 char *_strdup(char *str)
 {
 	char *aaa;
-	int i, r = 0;
+	size_t i, r;
 
 	if (str == NULL)
 		return (NULL);
@@ -19,7 +18,7 @@ char *_strdup(char *str)
 	while (str[i] != '\0')
 		i++;
 
-	aaa = malloc(sizeof(char) * (i + 1));
+	aaa = (char *)malloc(sizeof(char) * (i + 1));
 
 	if (aaa == NULL)
 		return (NULL);
