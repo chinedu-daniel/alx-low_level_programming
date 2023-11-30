@@ -2,7 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/** main - perform calculator functions on command line
+/**
+ * main - perform calculator functions on command line
  * @argc: argument count
  * @argv: argument vector
  *
