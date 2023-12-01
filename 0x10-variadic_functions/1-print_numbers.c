@@ -9,7 +9,8 @@
 
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
-	unsigned int i, arr;
+	unsigned int i;
+	int arr;
 
 	va_list ptr;
 
@@ -17,12 +18,13 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	for (i = 0; i < n; i++)
 	{
-		arr = va_arg(ptr, unsigned int);
+		arr = va_arg(ptr, int);
 		printf("%d\n", arr);
 
 		if (i != (n - 1) && separator != NULL)
 			printf("%s\n", separator);
 	}
 	printf("\n");
+
 	va_end(ptr);
 }
