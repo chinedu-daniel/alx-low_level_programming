@@ -9,7 +9,7 @@
 
 int main(void)
 {
-	printf("The name of the file is: %s\n", __FILE__);
+	printf("The name of the file is: %s\n" (__BUFFER_MACRO_H__));
 
 	return (0);
 }
