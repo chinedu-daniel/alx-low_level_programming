@@ -3,9 +3,9 @@
 /**
  * hash_table_create - Creates a new hash table with the specified size.
  *
- * @size: The size of the array.
+ * @size: The size of the hash table to create.
  *
- * Return: hash table on success, or NULL on failure.
+ * Return: hash table on success, or NULL on failure
  */
 
 hash_table_t *hash_table_create(unsigned long int size)
@@ -22,4 +22,3 @@ hash_table_t *hash_table_create(unsigned long int size)
 
 	return (hash_table);
 }
-
